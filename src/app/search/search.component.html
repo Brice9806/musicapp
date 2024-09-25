@@ -1,0 +1,34 @@
+<!-- <section class="filter-wrapper">
+    <div class="keyword-wrapper">
+        <input [formControl]="inputField" type="text" placeholder="Search for Artists..." autofocus>
+    </div>
+    <ul class="filter-select">
+        <div *ngFor="let result of searchResults">
+            <li class="filter-select-list">
+                <img src="{{result.images['2']?.url}}" alt="{{result.name}}" width="50" height="50">
+                <p class="artist-name">{{result.name}}</p>
+            </li>
+        </div>
+    </ul>
+</section> -->
+
+<h1>Need Music??</h1>
+<input type="text" name="searchStr" (keyup)="searchMusic($event)" placeholder="Search for Artists..." >
+<!-- <form>
+    <div>
+        <input type="text"  [(ngModel)]="searchStr"  placeholder="Search Music.....">
+    </div>
+</form> -->
+
+<div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search-res well">
+                    <h4>{{res.name}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
